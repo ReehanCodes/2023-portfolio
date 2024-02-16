@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flappy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+
+    <div class="header1">
+        <div class="menu-tog ">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class='wrapper'>   
+        <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path class="path" stroke="black" fill='#fff' stroke-width="3px" dur="10s" vector-effect="non-scaling-stroke" 
+          d="M 0 100 L 100 100 100 100 0 100 C 0 0, 0 0, 0 100"/>
+            <animateMotion dur="10s" repeatCount="indefinite">
+              <mpath xlink:href="#path" />
+            </animateMotion>
+        </svg>
+        <ul>
+            <li>
+                <a href="mainPage.html">HOME</a>
+            </li>
+            <li>
+                <a href="flappy.html">JS GAME 1 - Flappy Bird</a>
+            </li>
+            <li>
+                <a href="pong.html">JS GAME 2 - AI Pong</a>
+            </li>
+            <li>
+                <a href="aboutme.html">ABOUT ME</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class = "home-right">
+        <div class = "home-left">
+            <header class = "header">
+                <div class="logo">
+                    <h1>FLAPPYBIRD GAME</h1></div>
+            
+            </header>
+            <div class="left-container">
+                <h1 class="site">hey</h1>
+                </div>
+        </div>
+
+
+        <div class="socials">
+            <ul>
+                <li class="link"><bold>I Made Flappy Bird!</bold></li>
+            </ul>
+        </div>  
+
+        <div class="text">
+            <p></p>
+        </div>
+
+        <canvas id="board"></canvas>
+
+
+<script src="scripts2.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+@font-face {
+    font-family: "cargo";
+    src: url(./FormulaCondensed-Regular.woff2);
+  }
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+/* 50% of screen ting */
+html, body {
+  max-height: 100%;
+}
+
+.home-right{
+     background-color: rgb(19, 91, 103); 
+}
+
+h1{
+    font-size:2rem;
+    overflow:hidden;
+}
+a{
+    color:black;
+    text-decoration: none;
+    overflow:hidden;
+    font-size:larger;
+}
+.header{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 6rem;
+    opacity: 1;
+    overflow:hidden;
+}
+
+.logo{
+    position: absolute;
+    bottom: 2;
+    left:3%;
+}
+
+
+nav{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.home-left{
+    position: relative;
+    left: -55%;
+    width: 55%;
+    height: 100vh;
+    background-color: #fff;
+    animation: slide-perm 2s forwards ; 
+    overflow:hidden;
+}
+.image-container{
+    position: absolute;
+    left: -5%;
+    top: 20%;
+    width: 60%;
+    height: 500px;
+    overflow: hidden;
+    z-index: 2;
+}
+.image-container img{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    filter: grayscale(60%);
+    overflow:hidden;
+
+} 
+.overlay{
+   position: absolute;
+   z-index: 4;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 500px;
+   background-color: rgb(0, 0, 0,);
+   opacity: 1; 
+}
+.left-container{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    height: 35%;
+    padding-left: 18%;
+    padding-top: 1rem;
+    overflow:hidden;
+}
+.cta{
+    position: relative;
+    top: 20px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 12rem;
+    text-align: center;
+    background-color: #4a2b32;
+    color: white;
+    opacity: 1;
+    right: 20%;
+}
+.site{
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    overflow:hidden;
+}
+.socials{
+    position: absolute;
+    left: 30.3%;
+    top: -12.5%;
+    height: 50%;
+    color: white;
+    z-index: 4;
+    overflow:hidden;
+    font-size:100%;
+    mix-blend-mode:difference;
+}
+.socials ul{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+}
+.link{
+    top: 1900px;
+    color: white;
+    opacity: 1;
+    font-size:5rem;
+    animation: fadeInAnimation ease-in-out 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode:both;
+    
+}
+.active{
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+@keyframes slide{
+    0%{
+        left:-100%;
+
+    }
+    25%{
+        left:-100%;
+
+    }
+    75%{
+        left: 0;
+
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@keyframes slide-perm{
+    0%{
+        left:-100%;
+
+    }
+    25%{
+        left:-100%;
+
+    }
+    75%{
+        left: 0;
+
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+  .header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2vw;
+    z-index: 10;
+    mix-blend-mode: difference;
+  }
+  
+  .menu-tog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 10px;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: center;
+  }
+  
+  .menu-tog span {
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform-origin: center;
+    transition: 0.2s;
+    z-index: 7;
+  }
+  
+  .menu-tog span:nth-child(1) {
+    width: 100%;
+    z-index: 7;
+  }
+  
+  .menu-tog span:nth-child(2) {
+    width: 80%;
+    z-index: 7;
+  }
+  
+  .menu-tog.active span {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    z-index: 7;
+  }
+  
+  .menu-tog.active span:nth-child(1) {
+    top: 40%;
+    transform: rotate(45deg);
+    z-index: 7;
+  }
+  
+  .menu-tog.active span:nth-child(2) {
+    bottom: 40%;
+    transform: rotate(-45deg);
+    z-index: 7;
+  }
+  
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    z-index: 5;
+  }
+  
+  .wrapper > .transition {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .wrapper ul {
+    position: relative;
+    top: -5vh;
+    opacity: 0;
+    transition: 0.5s;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    pointer-events: none;
+    z-index:5;
+  }
+  
+  .wrapper ul.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 5;
+
+  }
+  
+  .wrapper li:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 5;
+    transition: 0.5s;
+  }
+
+  .text{
+    display:flex;
+    max-width: 750px;
+    position: fixed;
+    left:59.5%;
+    top:20%;
+    z-index:3;
+    overflow:hidden;
+    color: white;
+    font-size:1.5rem;
+    
+  }
+
+.text {
+  animation: fadeInAnimation ease-in-out 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode:inherit;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  85%{
+    opacity: 0.75;
+  }
+
+  100% {
+      opacity: 1;
+   }
+}
+
+#board{
+    z-index:4;
+    position:absolute;
+    top:20%;
+    right:40%;
+    text-align: center;
+    height:30rem;
+    background-image: url("flappybird/flappybirdbg.png");
+    animation: fadeInAnimation ease-in-out 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode:inherit;
+}
